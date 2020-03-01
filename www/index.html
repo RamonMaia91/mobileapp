@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+			<!-- Importing JavaScript, Bootstrap, Datatables, JQuery libraries -->
+
+				<link rel="stylesheet"
+					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+					integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+					crossorigin="anonymous">
+
+				<link rel="stylesheet" type="text/css"
+					href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+				<link rel="stylesheet" type="text/css"
+					href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />
+
+
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+					integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+					crossorigin="anonymous">
+				</script>
+	
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous">
+				</script>
+	
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous">
+				</script>
+	
+				<script src="https://kit.fontawesome.com/f609686f0c.js"
+					crossorigin="anonymous">
+				</script>
+	
+				<script src="js/index.js"></script>
+					
+			
+				<script type="text/javascript"
+					src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+				<script type="text/javascript"
+				src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+		<title>Mobile News</title>
+
+	</head>
+
+	<body>
+
+		<!-- MAIN PAGE -->
+		
+		<div class="container-fluid">
+			
+			<div class="card">
+				<div class="accordion" id="div-home" >
+					<div class="card"></div>
+						<div id="collapse-home" class="collapse show" aria-labelledby="heading-home" data-parent="#div-home">
+							<div class="card-body">
+								<p>
+									<!-- Showing the welcome message, date, time and the options to navigate into the app -->
+									
+									<div id="dt-home">
+										<center>
+											<p><h3>Welcome to CCT News App!</h3></p>
+											<p><h5 id="nowDate"></h5></p>
+											<p><h5><div id="nowTime"></div></h5></p>
+											
+											<p>
+												<!-- Sport, Business, Financial and a Saved buttons -->
+												<!-- Creating the main menu -->
+												<div class="container">
+													<div class="row">
+														<div class="col-md">
+															<a class="nav-link" id="menu-sport" href="#"><i class="fas fa-football-ball fa-4x"></i></a>
+															Sports
+														</div>
+														<div class="col-md">
+															<a class="nav-link" id="menu-business" href="#"><i class="fas fa-user-tie fa-4x"></i></a>	
+															Business															
+														</div>
+														<div class="col-md">
+															<a class="nav-link" id="menu-financial" href="#"><i class="fas fa-dollar-sign fa-4x"></i></a>
+															Financial
+														</div>
+														<div class="col-md">
+															<a class="nav-link" id="menu-saved" href="#"><i class="fas fa-save fa-4x"></i></a>												  
+															Saved
+														</div>
+													</div>
+												</div>
+											</p>											
+										</center>
+									</div>
+								</p>
+							</div>
+						</div>
+					</div>					
+				</div>			
+				
+				<!-- Sport -->
+				<!--(** For each of the options, when clicked, a back icon will be displayed and below of it
+					 the news will be displayed accordingly into a table). Here the display none function will take place
+					where all the other information wont be shown -->
+				
+				<div class="accordion" id="div-sport" style="display:none">
+					<div class="card">
+						<div id="collapse-sport" class="collapse show" aria-labelledby="heading-sport" data-parent="#div-sport">
+							<div class="card-body">
+								<p>
+									<a class="back" href="#"><i class="fas fa-undo-alt"></i> back</a>
+								</p>
+								<table id="dt-sport" class="display responsive" style="width: 100%"></table>
+							</div>
+						</div>
+					</div>					
+				</div>
+
+				<!-- **Business -->
+
+				<div class="accordion" id="div-business" style="display:none">
+					<div class="card">
+						<div id="collapse-business" class="collapse show" aria-labelledby="heading-business" data-parent="#div-business">
+							<div class="card-body">
+								<p>
+									<a class="back" href="#"><i class="fas fa-undo-alt"></i> back</a>
+								</p>
+								<table id="dt-business" class="display responsive" style="width: 100%"></table>
+							</div>
+						</div>
+					</div>					
+				</div>			
+
+				<!-- **Financial -->
+
+				<div class="accordion" id="div-financial" style="display:none">
+					<div class="card">
+						<div id="collapse-financial" class="collapse show" aria-labelledby="heading-financial" data-parent="#div-financial">
+							<div class="card-body">
+								<p>
+									<a class="back" href="#"><i class="fas fa-undo-alt"></i> back</a>
+								</p>
+								<table id="dt-financial" class="display responsive" style="width: 100%"></table>
+							</div>
+						</div>
+					</div>					
+				</div>	
+				
+				<!-- **Saved -->
+				<!-- When clicked on the saved button, the back and a clear button will be displayed and below
+					 all the saved news -->
+
+				<div class="accordion" id="div-saved" style="display:none">
+					<div class="card">
+						<div id="collapse-saved" class="collapse show" aria-labelledby="heading-saved" data-parent="#div-saved">
+							<div class="card-body">
+								<p>
+									<a class="back" href="#"><i class="fas fa-undo-alt"></i> back</a>
+									<a id="clear" href="#"><i class="fas fa-trash-alt"></i> clear</a>
+								</p>
+								<table id="dt-saved" class="display responsive" style="width: 100%"></table>
+							</div>
+						</div>
+					</div>					
+				</div>					
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Footer with fixed position -->
+		<div data-role="footer" data-position="fixed">
+				<center><h4>© Ramon Maia </h4></center>
+		</div>
+	
+	
+	
+</body>
+</html>
